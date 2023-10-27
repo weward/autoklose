@@ -36,21 +36,14 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast as dates.
-     *
-     * @var array<string, string>
-     */
-    protected $dates = [
-        'email_verified_at',
-        'last_email_sent_at'
-    ];
-
-    /**
      * The attributes that should be cast.
      *
      * @var array<string, string>
      */
-    protected $casts = [];
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'last_email_sent_at' => 'datetime'
+    ];
 
     /**
      * Motivate the user
